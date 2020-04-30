@@ -55,7 +55,7 @@
                 {
                     type: 'log',
                     min:1,
-                    max:1000000,
+                    max:10000000,
                     nameGap:1,
                     
 //scale: false ,
@@ -190,8 +190,8 @@ c.style.top = "68px";
 c.style.border = "1px solid";
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.moveTo(675/6*3,510);
-ctx.lineTo(675,510/5*2);
+ctx.moveTo(675/7*3,510);
+ctx.lineTo(675,510/5);
 ctx.strokeStyle = "#FF0000";        
 ctx.stroke();
 //console.log(c);
@@ -199,30 +199,30 @@ ctx.stroke();
     
    // var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.moveTo(675/6,510);
-ctx.lineTo(675,0);
+ctx.moveTo(675/7,510);
+ctx.lineTo(675/7*6,0);
 ctx.strokeStyle = "#FF0000";        
 ctx.stroke();
 
    // var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.moveTo(675/6*2,510);
-ctx.lineTo(675,510/5);
+ctx.moveTo(675/7*2,510);
+ctx.lineTo(675,0);
 ctx.strokeStyle = "#FF0000";        
 ctx.stroke();
    ctx.font = "16px Arial";
         ctx.fillStyle = "#FF0000";   
-ctx.fillText("10%", 630, 20);
+ctx.fillText("10%", 600, 20);
     
 
     ctx.font = "16px Arial";
 ctx.fillStyle = "#FF0000";           
-ctx.fillText("1%", 630, 110); 
+ctx.fillText("1%", 600, 110); 
     
 
     ctx.font = "16px Arial";
         ctx.fillStyle = "#FF0000";   
-ctx.fillText("0.1%", 630, 210);     
+ctx.fillText("0.1%", 600, 210);     
     
     var font, lineHeight, x, y;
 
