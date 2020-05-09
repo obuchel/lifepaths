@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ECharts Demo</title>
-    <style>
-        #echart,#echart2{
-            width:900px;
-            height:600px;
-        }
-    </style>
+
 </head>
 <body>
 <script
@@ -24,6 +19,10 @@
 <div id="echart"></div>
 <div id="echart2"></div>
 <script>
+    document.getElementById("echart").style.width = document.body.clientWidth*0.8+"px";
+     document.getElementById("echart2").style.width = document.body.clientWidth*0.8+"px";
+     document.getElementById("echart").style.height = document.body.clientHeight*0.6+"px";
+       document.getElementById("echart2").style.height = document.body.clientHeight*0.6+"px";
     var formatComa = d3.format(",");
     var app={};
     var myChart = echarts.init(document.getElementById('echart'));
@@ -180,9 +179,9 @@
       var c = document.createElement("CANVAS");
     
     c.id = "CursorLayer";
-c.width = 675;
+c.width = document.body.clientWidth*0.8;
        // alert(675/6);
-c.height = 510;
+c.height = document.body.clientHeight*0.8;
 c.style.zIndex = -9;
 c.style.position = "absolute";
 c.style.top = "68px";  
@@ -190,8 +189,8 @@ c.style.top = "68px";
 c.style.border = "1px solid";
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.moveTo(675/7*3,510);
-ctx.lineTo(675,510/5);
+ctx.moveTo(c.width/7*3,c.height);
+ctx.lineTo(c.width,c.height/5);
 ctx.strokeStyle = "#FF0000";        
 ctx.stroke();
 //console.log(c);
@@ -199,15 +198,15 @@ ctx.stroke();
     
    // var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.moveTo(675/7,510);
-ctx.lineTo(675/7*6,0);
+ctx.moveTo(c.width/7,c.height);
+ctx.lineTo(c.width/7*6,0);
 ctx.strokeStyle = "#FF0000";        
 ctx.stroke();
 
    // var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.moveTo(675/7*2,510);
-ctx.lineTo(675,0);
+ctx.moveTo(c.width/7*2,c.height);
+ctx.lineTo(c.width,0);
 ctx.strokeStyle = "#FF0000";        
 ctx.stroke();
    ctx.font = "16px Arial";
