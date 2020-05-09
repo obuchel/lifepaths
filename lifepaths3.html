@@ -21,8 +21,8 @@
 <script>
     document.getElementById("echart").style.width = document.body.clientWidth*0.8+"px";
      document.getElementById("echart2").style.width = document.body.clientWidth*0.8+"px";
-     document.getElementById("echart").style.height = document.body.clientHeight*0.6+"px";
-       document.getElementById("echart2").style.height = document.body.clientHeight*0.6+"px";
+     document.getElementById("echart").style.height = document.height*0.6+"px";
+       document.getElementById("echart2").style.height = document.height*0.6+"px";
     var formatComa = d3.format(",");
     var app={};
     var myChart = echarts.init(document.getElementById('echart'));
@@ -181,7 +181,7 @@
     c.id = "CursorLayer";
 c.width = document.body.clientWidth*0.8;
        // alert(675/6);
-c.height = document.body.clientHeight*0.8;
+c.height = document.height*0.8;
 c.style.zIndex = -9;
 c.style.position = "absolute";
 c.style.top = "68px";  
